@@ -4,74 +4,93 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+/* светлая */
 :root.theme-light {
-    --main-font-family: Inter, sans-serif;
-    --accent-font-family: "Press Start 2P", fantasy;
-    --main-text-weight: 400;
-    --accent-weight: 700;
-    --background-color: #ffffff;
-    --but-accent-color: #ffffff;
-    --accent-color: #000000;
-    --background: repeating-linear-gradient(
+    --text-font-weight: var(--text-font-weight-lihgt);
+    --title-font-weight: var(--title-font-weight-lihgt);
+    --page-background-color: #fff;
+    --background-color: #d3d3d3;
+    --header-background: var(--page-background-color);
+    --background-color-start: #e7e7e7;
+    --background-color-end: #1a1a1a;
+    --text-color: #000;
+    --mix-blend-color: var(--page-background-color);
+    --stroke-color: var(--text-color);
+    --label-stroke-color: var(--page-background-color);
+    --page-background-image: repeating-linear-gradient(
         to left,
         #d3d3d3 0 2px,
-        transparent 2px 4px
+        #d3d3d300 2px 4px
       ),
-      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  }
-  
-  :root.theme-dark {
-    --main-font-family: Inter, sans-serif;
-    --accent-font-family: "Press Start 2P", fantasy;
-    --main-text-weight: 465;
-    --accent-weight: 785;
-    --background-color: #000000;
-    --but-accent-color: #00cc14;
-    --accent-color: #00cc14;
-    --background: repeating-linear-gradient(
-        to left,
-        #000 0 2px,
-        transparent 2px 4px
-      ),
-      repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #007f0c, #004306);
   }
   
   @media (prefers-color-scheme: light) {
     :root {
-      --main-font-family: Inter, sans-serif;
-      --accent-font-family: "Press Start 2P", fantasy;
-      --main-text-weight: 400;
-      --accent-weight: 700;
-      --background-color: #ffffff;
-      --but-accent-color: #ffffff;
-      --accent-color: #000000;
-      --background: repeating-linear-gradient(
-          to left,
-          #d3d3d3 0 2px,
-          transparent 2px 4px
-        ),
-        repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-        linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+      --text-font-weight: var(--text-font-weight-lihgt);
+      --title-font-weight: var(--title-font-weight-lihgt);
+      --page-background-color: #fff;
+      --background-color: #d3d3d3;
+      --header-background: var(--page-background-color);
+      --background-color-start: #e7e7e7;
+      --background-color-end: #1a1a1a;
+      --text-color: #000;
+      --mix-blend-color: var(--page-background-color);
+      --stroke-color: var(--text-color);
+      --label-stroke-color: var(--page-background-color);
+      --page-background-image: repeating-linear-gradient(
+        to left,
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     }
+  }
+  
+  /* темная */
+  :root.theme-dark {
+    --text-font-weight: var(--text-font-weight-dark);
+    --title-font-weight: var(--title-font-weight-dark);
+    --page-background-color: #000;
+    --background-color: var(--page-background-color);
+    --header-background: var(--page-background-color);
+    --background-color-start: #007f0c;
+    --background-color-end: #004306;
+    --text-color: #00cc14;
+    --mix-blend-color: var(--text-color);
+    --stroke-color: var(--text-color);
+    --label-stroke-color: var(--page-background-color);
+    --page-background-image: repeating-linear-gradient(
+      to left,
+      #000000 0 2px,
+      #00000000 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306);
   }
   
   @media (prefers-color-scheme: dark) {
     :root {
-      --main-font-family: Inter, sans-serif;
-      --accent-font-family: "Press Start 2P", fantasy;
-      --main-text-weight: 465;
-      --accent-weight: 785;
-      --background-color: #000000;
-      --but-accent-color: #00cc14;
-      --accent-color: #00cc14;
-      --background: repeating-linear-gradient(
-          to left,
-          #000 0 2px,
-          transparent 2px 4px
-        ),
-        repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-        linear-gradient(to bottom, #007f0c, #004306);
+      --text-font-weight: var(--text-font-weight-dark);
+      --title-font-weight: var(--title-font-weight-dark);
+      --page-background-color: #000;
+      --background-color: var(--page-background-color);
+      --header-background: var(--page-background-color);
+      --background-color-start: #007f0c;
+      --background-color-end: #004306;
+      --text-color: #00cc14;
+      --mix-blend-color: var(--text-color);
+      --stroke-color: var(--text-color);
+      --label-stroke-color: var(--page-background-color);
+      --page-background-image: repeating-linear-gradient(
+        to left,
+        #000000 0 2px,
+        #00000000 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
+      linear-gradient(to bottom, #007f0c 0.01%, #004306);
     }
   }
